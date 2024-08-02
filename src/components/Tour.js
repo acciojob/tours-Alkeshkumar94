@@ -9,13 +9,13 @@ function Tour({id,image,info,price,name,remove}) {
             <div className='footer'>
                 <h4>{name}</h4>
                 <p>{price}</p>
-                <p id="tour-item-para">
+                <p id={`tour-item-para-${id}`}>
                     {readMore?info :`${info.substring(0,200)}...`}
                     <button onClick={()=>setReadMore(!readMore)}>
                         {readMore?'show less':'show more'}
                     </button>
                 </p>
-                <button id="delete-btn" onClick={() => remove(id)}>Not Interested</button>
+                <button id={`delete-btn-${id}`} onClick={() => remove(id)}>Not Interested</button>
 
             </div>
         </div>
