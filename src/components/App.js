@@ -54,7 +54,7 @@ function App() {
      return <main><Loading/></main>
   }
   if(tours.length==0){
-    return <main className='title'>
+    return <main id='main'>
       <h1>No tours left</h1>
       <button className='btn' onClick={setTours(tourData)}>Refresh</button>
     </main>
